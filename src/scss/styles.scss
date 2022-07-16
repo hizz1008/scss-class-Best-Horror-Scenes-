@@ -20,7 +20,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-right: 50px;
+
   font-weight: 400;
   background-color: $white;
   color: $red;
@@ -58,9 +58,9 @@ header {
         li {
           cursor: pointer;
           margin-right: 12px;
-          font-weight: 500;
+          font-weight: 400;
           color: black;
-          opacity: 0.7;
+          opacity: 0.6;
           padding-bottom: 5px;
           margin-bottom: 5px;
           border-bottom: 1px solid black;
@@ -84,7 +84,6 @@ main {
   background-color: $red;
   margin-left: $fixedWidth;
   .main__header {
-    padding: 70px;
     h3 {
       position: fixed;
       top: 0;
@@ -102,34 +101,58 @@ main {
       border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
     }
   }
+  .header_fiexd_margin{
+    display: block;
+    padding: 60px 0px;
+  }
   .movie {
-    height: 100vh;
+    background: linear-gradient(
+      to top,
+     rgba(0,0,0,0.1) 2%,
+      rgba(0,0,0,0),
+      rgba(0,0,0,0),
+      rgba(0,0,0,0),
+      rgba(0,0,0,0)
+    )
+    $red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .movie__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      margin-bottom: 30px;
-      vertical-align: baseline;
-      h4,
-      h5 {
-        color: $white;
-      }
-      h4 {
-        font-size: 50px;
-        font-weight: 700;
-        padding-right: 1em;
-        min-width: 450px;
-      }
-      h5 {
-        font-weight: 600;
+    .wrapper{
+      padding: 0 8%;
+      padding-top: 80px;
+      .movie__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 30px;
+        vertical-align: baseline;
+        h4,
+        h5 {
+          color: $white;
+        }
+        h4 {
+          font-size: 50px;
+          font-weight: 700;
+          padding-right: 1em;
+          min-width: 450px;
+        }
+        h5 {
+          font-weight: 600;
+        }
       }
     }
-  }
+    }
+
   img {
     width: 100%;
+    box-shadow: 0 80px 80px -80px #2d0806;
+  }
+  h6{
+    color: $white;
+    padding-top: 55px;
+    line-height: 30px;
+    padding-bottom: 80px;
   }
 }
